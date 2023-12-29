@@ -125,58 +125,6 @@
                   "ResultsPageText": "The envelope has been created and sent!<br/>Envelope ID {0}."
                 },
                 {
-                  "ExampleNumber": 37,
-                  "CFREnabled": "NonCFR",
-                  "ExampleName": "Request a signature by SMS or WhatsApp delivery",
-                  "ExampleDescription": "Sends a signature request via an SMS or WhatsApp message.",
-                  "LinksToAPIMethod": [
-                    {
-                      "Path": "https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/",
-                      "PathName": "Envelopes::create"
-                    }
-                  ],
-                  "Forms": [
-                    {
-                      "Inputs": [
-                        {
-                          "InputName": "Signer Country Code",
-                          "InputPlaceholder": "1"
-                        },
-                        {
-                          "InputName": "Signer Phone Number",
-                          "InputPlaceholder": "4155551212"
-                        },
-                        {
-                          "InputName": "Signer Name",
-                          "InputPlaceholder": "Pat Johnson"
-                        },
-                        {
-                          "InputName": "CC Country Code",
-                          "InputPlaceholder": "1"
-                        },
-                        {
-                          "InputName": "CC Phone Number",
-                          "InputPlaceholder": "4155551212"
-                        },
-                        {
-                          "InputName": "CC Name",
-                          "InputPlaceholder": "Pat Johnson"
-                        },
-                        {
-                          "InputName": "Delivery Method:"
-                        },
-                        {
-                          "InputName": "SMS"
-                        },
-                        {
-                          "InputName": "WhatsApp"
-                        }
-                      ]
-                    }
-                  ],
-                  "ResultsPageText": "The envelope has been created and sent!<br />Envelope ID {0}."
-                },
-                {
                   "ExampleNumber": 42,
                   "CFREnabled": "NonCFR",
                   "ExampleName": "Request a signature by email with document generation",
@@ -235,6 +183,58 @@
                         {
                           "InputName": "Start Date",
                           "InputPlaceholder": "mm/dd/yyyy"
+                        }
+                      ]
+                    }
+                  ],
+                  "ResultsPageText": "The envelope has been created and sent!<br />Envelope ID {0}."
+                },
+                {
+                  "ExampleNumber": 37,
+                  "CFREnabled": "NonCFR",
+                  "ExampleName": "Request a signature by SMS or WhatsApp delivery",
+                  "ExampleDescription": "Sends a signature request via an SMS or WhatsApp message.",
+                  "LinksToAPIMethod": [
+                    {
+                      "Path": "https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/",
+                      "PathName": "Envelopes::create"
+                    }
+                  ],
+                  "Forms": [
+                    {
+                      "Inputs": [
+                        {
+                          "InputName": "Signer Country Code",
+                          "InputPlaceholder": "1"
+                        },
+                        {
+                          "InputName": "Signer Phone Number",
+                          "InputPlaceholder": "4155551212"
+                        },
+                        {
+                          "InputName": "Signer Name",
+                          "InputPlaceholder": "Pat Johnson"
+                        },
+                        {
+                          "InputName": "CC Country Code",
+                          "InputPlaceholder": "1"
+                        },
+                        {
+                          "InputName": "CC Phone Number",
+                          "InputPlaceholder": "4155551212"
+                        },
+                        {
+                          "InputName": "CC Name",
+                          "InputPlaceholder": "Pat Johnson"
+                        },
+                        {
+                          "InputName": "Delivery Method:"
+                        },
+                        {
+                          "InputName": "SMS"
+                        },
+                        {
+                          "InputName": "WhatsApp"
                         }
                       ]
                     }
@@ -373,6 +373,65 @@
                   "ResultsPageText": ""
                 },
                 {
+                  "ExampleNumber": 44,
+                  "CFREnabled": "NonCFR",
+                  "ExampleName": "Request a signature using focused view",
+                  "ExampleDescription": "Sends an envelope, then uses focused view for the signer.",
+                  "LinksToAPIMethod": [
+                    {
+                      "Path": "https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/",
+                      "PathName": "Envelopes:create"
+                    },
+                    {
+                      "Path": "https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopeviews/createrecipient/",
+                      "PathName": "EnvelopeViews:createRecipient"
+                    }
+                  ],
+                  "Forms": [
+                    {
+                      "Inputs": [
+                        {
+                          "InputName": "Signer Email",
+                          "InputPlaceholder": "pat@example.com"
+                        },
+                        {
+                          "InputName": "Signer Name",
+                          "InputPlaceholder": "Pat Johnson"
+                        }
+                      ]
+                    }
+                  ],
+                  "ResultsPageText": "The document has been embedded with focused view.",
+                  "SkipForLanguages": "bash;powershell"
+                },
+                {
+                  "ExampleNumber": 39,
+                  "CFREnabled": "NonCFR",
+                  "ExampleName": "Send an envelope to an In Person Signer",
+                  "ExampleDescription": "Demonstrates how to host an In Person Signing session with embedded signing.",
+                  "LinksToAPIMethod": [
+                    {
+                      "Path": "https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/",
+                      "PathName": "Envelopes:create"
+                    },
+                    {
+                      "Path": "https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopeviews/createrecipient/",
+                      "PathName": "EnvelopeViews:createRecipient"
+                    }
+                  ],
+                  "Forms": [
+                    {
+                      "Inputs": [
+                        {
+                          "InputName": "Signer Name",
+                          "InputPlaceholder": "Pat Johnson"
+                        }
+                      ]
+                    }
+                  ],
+                  "ResultsPageText": ""
+                },
+                {
                   "ExampleNumber": 14,
                   "CFREnabled": "NonCFR",
                   "ExampleName": "Send an envelope with an order form and payment field",
@@ -416,65 +475,6 @@
                     }
                   ],
                   "ResultsPageText": "The envelope has been created and sent!<br/>Envelope ID {0}."
-                },
-                {
-                  "ExampleNumber": 39,
-                  "CFREnabled": "NonCFR",
-                  "ExampleName": "Send an envelope to an In Person Signer",
-                  "ExampleDescription": "Demonstrates how to host an In Person Signing session with embedded signing.",
-                  "LinksToAPIMethod": [
-                    {
-                      "Path": "https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/",
-                      "PathName": "Envelopes:create"
-                    },
-                    {
-                      "Path": "https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopeviews/createrecipient/",
-                      "PathName": "EnvelopeViews:createRecipient"
-                    }
-                  ],
-                  "Forms": [
-                    {
-                      "Inputs": [
-                        {
-                          "InputName": "Signer Name",
-                          "InputPlaceholder": "Pat Johnson"
-                        }
-                      ]
-                    }
-                  ],
-                  "ResultsPageText": ""
-                },
-                {
-                  "ExampleNumber": 44,
-                  "CFREnabled": "NonCFR",
-                  "ExampleName": "Request a signature using focused view",
-                  "ExampleDescription": "Sends an envelope, then uses focused view for the signer.",
-                  "LinksToAPIMethod": [
-                    {
-                      "Path": "https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopes/create/",
-                      "PathName": "Envelopes:create"
-                    },
-                    {
-                      "Path": "https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopeviews/createrecipient/",
-                      "PathName": "EnvelopeViews:createRecipient"
-                    }
-                  ],
-                  "Forms": [
-                    {
-                      "Inputs": [
-                        {
-                          "InputName": "Signer Email",
-                          "InputPlaceholder": "pat@example.com"
-                        },
-                        {
-                          "InputName": "Signer Name",
-                          "InputPlaceholder": "Pat Johnson"
-                        }
-                      ]
-                    }
-                  ],
-                  "ResultsPageText": "The document has been embedded with focused view.",
-                  "SkipForLanguages": "bash;powershell"
                 }
               ]
             },
